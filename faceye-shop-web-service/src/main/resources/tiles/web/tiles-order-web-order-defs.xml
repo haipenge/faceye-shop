@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <!-- 模块:订单 - order : 业务对像:订单 - Order,web tiles模板配置 -->
+    <!-- 作者:haipenge -->
+    <!-- 创建日期:2015-6-16 18:57:42 -->
+    <!-- 订单 : Order web 首页(列表页) -->
+	<definition name="order.order.manager" extends="shop.web">
+	    <put-attribute name="default-center" value="/component/order/order/order_center.jsp"></put-attribute>
+	</definition>
+	
+	<!-- 订单 新增,编辑页面 -->
+	<definition name="order.order.update" extends="shop.web">
+	    <put-attribute name="default-center" value="/component/order/order/order_update.jsp"></put-attribute>
+	</definition>
+	
+	<!-- 订单 明细页 -->
+	<definition name="order.order.detail" extends="shop.web">
+	    <put-attribute name="default-center" value="/component/order/order/order_detail.jsp"></put-attribute>
+	</definition>
+	<!-- 从购物车提交订单 -->
+	<definition name="order.order.submit.cartItem.2.order.result" extends="shop.web">
+	    <put-attribute name="default-center" value="/component/order/order/submit_cart_item_2_order_result_center.jsp"></put-attribute>
+	</definition>
+	<!-- 直接购买，提交订单 -->
+	<definition name="order.order.direct.buy" extends="shop.web">
+	    <put-attribute name="default-center" value="/component/order/order/direct_to_buy.jsp"></put-attribute>
+	</definition>
+	<!-- 去支付 -->
+	<definition name="order.order.to.pay" extends="shop.web">
+	    <put-attribute name="default-center" value="/component/order/order/order_to_pay.jsp"></put-attribute>
+	</definition>
+	<!-- Pay Success -->
+	<definition name="order.order.pay.success" extends="shop.web">
+	    <put-attribute name="default-center" value="/component/order/order/order_pay_success.jsp"></put-attribute>
+	</definition>
+	
+</tiles-definitions>

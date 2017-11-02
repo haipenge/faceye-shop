@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <!-- 模块:订单 - order : 业务对像:订单 - Order, 管理后台 tiles模板配置 -->
+    <!-- 作者:haipenge -->
+    <!-- 创建日期:2015-6-13 11:31:36 -->
+    <!-- 订单 : Order 管理 首页(列表页) -->
+	<definition name="order.order.manager" extends="default.manager">
+	    <put-attribute name="default-center" value="order.order.center"></put-attribute>
+	</definition>
+	<definition name="order.order.center" extends="default.center">
+	    <put-attribute name="default-center-right" value="/component/order/order/order_center.jsp"></put-attribute>
+	</definition>
+	
+	<!-- 订单 新增,编辑页面 -->
+	<definition name="order.order.update" extends="default.manager">
+	    <put-attribute name="default-center" value="order.order.update.center"></put-attribute>
+	</definition>
+	<definition name="order.order.update.center" extends="default.center">
+	    <put-attribute name="default-center-right" value="/component/order/order/order_update.jsp"></put-attribute>
+	</definition>
+	
+	<!-- 订单 明细页 -->
+	<definition name="order.order.detail" extends="default.manager">
+	    <put-attribute name="default-center" value="order.order.detail.center"></put-attribute>
+	</definition>
+	<definition name="order.order.detail.center" extends="default.center">
+	    <put-attribute name="default-center-right" value="/component/order/order/order_detail.jsp"></put-attribute>
+	</definition>
+	
+</tiles-definitions>

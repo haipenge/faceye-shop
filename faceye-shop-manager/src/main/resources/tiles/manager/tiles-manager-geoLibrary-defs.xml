@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <!-- 模块:lbs 业务对像:GeoLibrary 管理后台 tiles模板配置 -->
+    <!-- 作者:haipege -->
+    <!-- GeoLibrary 管理 首页(列表页) -->
+	<definition name="lbs.geoLibrary.manager" extends="default.manager">
+	    <put-attribute name="default-center" value="lbs.geoLibrary.center"></put-attribute>
+	</definition>
+	<definition name="lbs.geoLibrary.center" extends="default.center">
+	    <put-attribute name="default-center-right" value="/component/lbs/geoLibrary/geoLibrary_center.jsp"></put-attribute>
+	</definition>
+	
+	<!-- GeoLibrary 新增,编辑页面 -->
+	<definition name="lbs.geoLibrary.update" extends="default.manager">
+	    <put-attribute name="default-center" value="lbs.geoLibrary.update.center"></put-attribute>
+	</definition>
+	<definition name="lbs.geoLibrary.update.center" extends="default.center">
+	    <put-attribute name="default-center-right" value="/component/lbs/geoLibrary/geoLibrary_update.jsp"></put-attribute>
+	</definition>
+	
+	<!-- GeoLibrary 明细页 -->
+	<definition name="lbs.geoLibrary.detail" extends="default.manager">
+	    <put-attribute name="default-center" value="lbs.geoLibrary.detail.center"></put-attribute>
+	</definition>
+	<definition name="lbs.geoLibrary.detail.center" extends="default.center">
+	    <put-attribute name="default-center-right" value="/component/lbs/geoLibrary/geoLibrary_detail.jsp"></put-attribute>
+	</definition>
+	
+</tiles-definitions>

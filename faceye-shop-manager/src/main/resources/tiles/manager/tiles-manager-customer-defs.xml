@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <!-- 模块:客户 - customer : 业务对像:客户 - Customer, 管理后台 tiles模板配置 -->
+    <!-- 作者:haipenge -->
+    <!-- 创建日期:2015-6-13 11:31:36 -->
+    <!-- 客户 : Customer 管理 首页(列表页) -->
+	<definition name="customer.customer.manager" extends="default.manager">
+	    <put-attribute name="default-center" value="customer.customer.center"></put-attribute>
+	</definition>
+	<definition name="customer.customer.center" extends="default.center">
+	    <put-attribute name="default-center-right" value="/component/customer/customer/customer_center.jsp"></put-attribute>
+	</definition>
+	
+	<!-- 客户 新增,编辑页面 -->
+	<definition name="customer.customer.update" extends="default.manager">
+	    <put-attribute name="default-center" value="customer.customer.update.center"></put-attribute>
+	</definition>
+	<definition name="customer.customer.update.center" extends="default.center">
+	    <put-attribute name="default-center-right" value="/component/customer/customer/customer_update.jsp"></put-attribute>
+	</definition>
+	
+	<!-- 客户 明细页 -->
+	<definition name="customer.customer.detail" extends="default.manager">
+	    <put-attribute name="default-center" value="customer.customer.detail.center"></put-attribute>
+	</definition>
+	<definition name="customer.customer.detail.center" extends="default.center">
+	    <put-attribute name="default-center-right" value="/component/customer/customer/customer_detail.jsp"></put-attribute>
+	</definition>
+	
+</tiles-definitions>

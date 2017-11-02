@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <!-- 模块:product 业务对像:Image 管理后台 tiles模板配置 -->
+    <!-- 作者:haipege -->
+    <!-- Image 管理 首页(列表页) -->
+	<definition name="product.image.manager" extends="default.web">
+	    <put-attribute name="default-center" value="/component/product/image/image_center.jsp"></put-attribute>
+	</definition>
+	
+	
+	<!-- Image 新增,编辑页面 -->
+	<definition name="product.image.update" extends="default.web">
+	    <put-attribute name="default-center" value="/component/product/image/image_update.jsp"></put-attribute>
+	</definition>
+	
+	
+	<!-- Image 明细页 -->
+	<definition name="product.image.detail" extends="default.manager">
+	    <put-attribute name="default-center" value="/component/product/image/image_detail.jsp"></put-attribute>
+	</definition>
+	
+	
+</tiles-definitions>

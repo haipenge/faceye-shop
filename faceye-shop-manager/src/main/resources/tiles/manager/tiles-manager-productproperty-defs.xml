@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <!-- 模块:产品 - product : 业务对像:产品属性 - ProductProperty, 管理后台 tiles模板配置 -->
+    <!-- 作者:haipenge -->
+    <!-- 创建日期:2015-6-13 11:31:36 -->
+    <!-- 产品属性 : ProductProperty 管理 首页(列表页) -->
+	<definition name="product.productProperty.manager" extends="default.manager">
+	    <put-attribute name="default-center" value="product.productProperty.center"></put-attribute>
+	</definition>
+	<definition name="product.productProperty.center" extends="default.center">
+	    <put-attribute name="default-center-right" value="/component/product/productProperty/productProperty_center.jsp"></put-attribute>
+	</definition>
+	
+	<!-- 产品属性 新增,编辑页面 -->
+	<definition name="product.productProperty.update" extends="default.manager">
+	    <put-attribute name="default-center" value="product.productProperty.update.center"></put-attribute>
+	</definition>
+	<definition name="product.productProperty.update.center" extends="default.center">
+	    <put-attribute name="default-center-right" value="/component/product/productProperty/productProperty_update.jsp"></put-attribute>
+	</definition>
+	
+	<!-- 产品属性 明细页 -->
+	<definition name="product.productProperty.detail" extends="default.manager">
+	    <put-attribute name="default-center" value="product.productProperty.detail.center"></put-attribute>
+	</definition>
+	<definition name="product.productProperty.detail.center" extends="default.center">
+	    <put-attribute name="default-center-right" value="/component/product/productProperty/productProperty_detail.jsp"></put-attribute>
+	</definition>
+	
+</tiles-definitions>

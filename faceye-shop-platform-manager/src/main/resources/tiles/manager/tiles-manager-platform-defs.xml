@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <!-- 模块:platform 业务对像:Platform 管理后台 tiles模板配置 -->
+    <!-- 作者:haipege -->
+    <!-- Platform 管理 首页(列表页) -->
+	<definition name="platform.platform.manager" extends="default.manager">
+	    <put-attribute name="default-center" value="platform.platform.center"></put-attribute>
+	</definition>
+	<definition name="platform.platform.center" extends="default.center">
+	    <put-attribute name="default-center-right" value="/component/platform/platform/platform_center.jsp"></put-attribute>
+	</definition>
+	
+	<!-- Platform 新增,编辑页面 -->
+	<definition name="platform.platform.update" extends="default.manager">
+	    <put-attribute name="default-center" value="platform.platform.update.center"></put-attribute>
+	</definition>
+	<definition name="platform.platform.update.center" extends="default.center">
+	    <put-attribute name="default-center-right" value="/component/platform/platform/platform_update.jsp"></put-attribute>
+	</definition>
+	
+	<!-- Platform 明细页 -->
+	<definition name="platform.platform.detail" extends="default.manager">
+	    <put-attribute name="default-center" value="platform.platform.detail.center"></put-attribute>
+	</definition>
+	<definition name="platform.platform.detail.center" extends="default.center">
+	    <put-attribute name="default-center-right" value="/component/platform/platform/platform_detail.jsp"></put-attribute>
+	</definition>
+	
+</tiles-definitions>

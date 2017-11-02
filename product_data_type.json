@@ -1,0 +1,5 @@
+{"_class":"com.faceye.component.product.entity.DataType","_id":{"$numberLong":"1"},"code":"string","name":"文本"}
+{"_class":"com.faceye.component.product.entity.DataType","_id":{"$numberLong":"2"},"code":"integer","name":"整数"}
+{"_class":"com.faceye.component.product.entity.DataType","_id":{"$numberLong":"3"},"code":"float","name":"小数"}
+{"_class":"com.faceye.component.product.entity.DataType","_id":{"$numberLong":"4"},"code":"boolean","name":"布尔"}
+{"_class":"com.faceye.component.product.entity.DataType","_id":{"$numberLong":"5"},"code":"enum","name":"枚举型"}

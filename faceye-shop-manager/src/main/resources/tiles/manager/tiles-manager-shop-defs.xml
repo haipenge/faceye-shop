@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <!-- 模块:配置 - setting : 业务对像:店铺 - Shop, 管理后台 tiles模板配置 -->
+    <!-- 作者:haipenge -->
+    <!-- 创建日期:2015-6-13 11:31:35 -->
+    <!-- 店铺 : Shop 管理 首页(列表页) -->
+	<definition name="setting.shop.manager" extends="default.manager">
+	    <put-attribute name="default-center" value="setting.shop.center"></put-attribute>
+	</definition>
+	<definition name="setting.shop.center" extends="default.center">
+	    <put-attribute name="default-center-right" value="/component/setting/shop/shop_center.jsp"></put-attribute>
+	</definition>
+	
+	<!-- 店铺 新增,编辑页面 -->
+	<definition name="setting.shop.update" extends="default.manager">
+	    <put-attribute name="default-center" value="setting.shop.update.center"></put-attribute>
+	</definition>
+	<definition name="setting.shop.update.center" extends="default.center">
+	    <put-attribute name="default-center-right" value="/component/setting/shop/shop_update.jsp"></put-attribute>
+	</definition>
+	
+	<!-- 店铺 设置logo页面 -->
+	<definition name="setting.shop.set.logo" extends="default.manager">
+	    <put-attribute name="default-center" value="setting.shop.set.logo.center"></put-attribute>
+	</definition>
+	<definition name="setting.shop.set.logo.center" extends="default.center">
+	    <put-attribute name="default-center-right" value="/component/setting/shop/shop_set_logo.jsp"></put-attribute>
+	</definition>
+	
+	<!-- 店铺 明细页 -->
+	<definition name="setting.shop.detail" extends="default.manager">
+	    <put-attribute name="default-center" value="setting.shop.detail.center"></put-attribute>
+	</definition>
+	<definition name="setting.shop.detail.center" extends="default.center">
+	    <put-attribute name="default-center-right" value="/component/setting/shop/shop_detail.jsp"></put-attribute>
+	</definition>
+	
+</tiles-definitions>

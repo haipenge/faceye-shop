@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <!-- 模块:产品 - product : 业务对像:SKU属性 - SkuProperty,web tiles模板配置 -->
+    <!-- 作者:haipenge -->
+    <!-- 创建日期:2015-6-16 18:57:42 -->
+    <!-- SKU属性 : SkuProperty web 首页(列表页) -->
+	<definition name="product.skuProperty.manager" extends="shop.web">
+	    <put-attribute name="default-center" value="/component/product/skuProperty/skuProperty_center.jsp"></put-attribute>
+	</definition>
+	
+	<!-- SKU属性 新增,编辑页面 -->
+	<definition name="product.skuProperty.update" extends="shop.web">
+	    <put-attribute name="default-center" value="/component/product/skuProperty/skuProperty_update.jsp"></put-attribute>
+	</definition>
+	
+	<!-- SKU属性 明细页 -->
+	<definition name="product.skuProperty.detail" extends="shop.web">
+	    <put-attribute name="default-center" value="/component/product/skuProperty/skuProperty_detail.jsp"></put-attribute>
+	</definition>
+	
+</tiles-definitions>

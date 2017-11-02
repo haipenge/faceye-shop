@@ -1,0 +1,39 @@
+/**
+*说明:配置->setting css样式表控制
+*作者:haipenge
+*/
+body {
+  background-color:#F5F5F5;
+}
+
+.product-list-img {
+	height: 80px;
+}
+
+.border-0 {
+	border: 0;
+}
+/**
+*重写list-group-item 样式
+*/
+a.list-group-item:hover,a.list-group-item:focus {
+	text-decoration: none;
+	background-color: white;
+}
+/**
+*文字过长自动隐藏
+*/
+.show-more {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+/**
+*容器背景
+*/
+.bg-white{
+	background-color:white;
+}
+.price{
+	color:red;
+}

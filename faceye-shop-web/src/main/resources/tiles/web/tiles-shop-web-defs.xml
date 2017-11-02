@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<!-- 默认的Web 页面模板 -->
+	<definition name="shop.web"
+		template="/component/security/web/template/web/default_template.jsp">
+		<put-attribute name="default-header"
+			value="/component/template/shop/default_header.jsp"></put-attribute>
+		<put-attribute name="default-center"
+			value="/component/security/web/template/web/default_center.jsp"></put-attribute>
+		<put-attribute name="default-footer"
+			value="/component/security/web/template/web/default_footer.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="shop.about" extends="shop.web">
+	    <put-attribute name="/component/setting/shop/about/default.jsp"></put-attribute>
+	</definition>
+	
+	
+	<!-- 用户登陆 -->
+	<definition name="security.web.user.login" extends="shop.web">
+	    <put-attribute name="default-center" value="/component/security/web/user/login.jsp"></put-attribute>
+	</definition>
+	
+	<!-- 用户注册 -->
+	<definition name="security.web.user.register" extends="shop.web">
+	    <put-attribute name="default-center" value="/component/security/web/user/user_register.jsp"></put-attribute>
+	</definition>
+	
+</tiles-definitions>

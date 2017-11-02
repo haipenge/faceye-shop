@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <!-- 模块:库存 - inventory : 业务对像:库存单据 - Invoice,web tiles模板配置 -->
+    <!-- 作者:haipenge -->
+    <!-- 创建日期:2015-6-16 18:57:43 -->
+    <!-- 库存单据 : Invoice web 首页(列表页) -->
+	<definition name="inventory.invoice.manager" extends="shop.web">
+	    <put-attribute name="default-center" value="/component/inventory/invoice/invoice_center.jsp"></put-attribute>
+	</definition>
+	
+	<!-- 库存单据 新增,编辑页面 -->
+	<definition name="inventory.invoice.update" extends="shop.web">
+	    <put-attribute name="default-center" value="/component/inventory/invoice/invoice_update.jsp"></put-attribute>
+	</definition>
+	
+	<!-- 库存单据 明细页 -->
+	<definition name="inventory.invoice.detail" extends="shop.web">
+	    <put-attribute name="default-center" value="/component/inventory/invoice/invoice_detail.jsp"></put-attribute>
+	</definition>
+	
+</tiles-definitions>

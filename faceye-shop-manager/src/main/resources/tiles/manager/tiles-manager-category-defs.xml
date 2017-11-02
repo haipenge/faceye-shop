@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <!-- 模块:产品 - product : 业务对像:产品分类 - Category, 管理后台 tiles模板配置 -->
+    <!-- 作者:haipenge -->
+    <!-- 创建日期:2015-6-13 11:31:35 -->
+    <!-- 产品分类 : Category 管理 首页(列表页) -->
+	<definition name="product.category.manager" extends="default.manager">
+	    <put-attribute name="default-center" value="product.category.center"></put-attribute>
+	</definition>
+	<definition name="product.category.center" extends="default.center">
+	    <put-attribute name="default-center-right" value="/component/product/category/category_center.jsp"></put-attribute>
+	</definition>
+	
+	<!-- 产品分类 新增,编辑页面 -->
+	<definition name="product.category.update" extends="default.manager">
+	    <put-attribute name="default-center" value="product.category.update.center"></put-attribute>
+	</definition>
+	<definition name="product.category.update.center" extends="default.center">
+	    <put-attribute name="default-center-right" value="/component/product/category/category_update.jsp"></put-attribute>
+	</definition>
+	
+	<!-- 产品分类 明细页 -->
+	<definition name="product.category.detail" extends="default.manager">
+	    <put-attribute name="default-center" value="product.category.detail.center"></put-attribute>
+	</definition>
+	<definition name="product.category.detail.center" extends="default.center">
+	    <put-attribute name="default-center-right" value="/component/product/category/category_detail.jsp"></put-attribute>
+	</definition>
+	
+</tiles-definitions>
