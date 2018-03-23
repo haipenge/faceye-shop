@@ -41,7 +41,7 @@ public class PlatformRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testDelete() throws Exception {
 		Platform entity = new Platform();
 		this.platformRepository.save(entity);
-        this.platformRepository.delete(entity.getId());
+        this.platformRepository.deleteById(entity.getId());
         Iterable<Platform> entities = this.platformRepository.findAll();
 		Assert.isTrue(!entities.iterator().hasNext());
 	}
@@ -50,7 +50,7 @@ public class PlatformRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testFindOne() throws Exception {
 		Platform entity = new Platform();
 		this.platformRepository.save(entity);
-		Platform platform=this.platformRepository.findOne(entity.getId());
+		Platform platform=this.platformRepository.findById(entity.getId());
 		Assert.isTrue(platform!=null);
 	}
 

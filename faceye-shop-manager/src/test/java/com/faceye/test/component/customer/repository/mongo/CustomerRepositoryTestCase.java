@@ -41,7 +41,7 @@ public class CustomerRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testDelete() throws Exception {
 		Customer customer = new Customer();
 		this.customerRepository.save(customer);
-        this.customerRepository.delete(customer.getId());
+        this.customerRepository.deleteById(customer.getId());
         Iterable<Customer> customers = this.customerRepository.findAll();
 		Assert.isTrue(!customers.iterator().hasNext());
 	}
@@ -50,7 +50,7 @@ public class CustomerRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testFindOne() throws Exception {
 		Customer customer = new Customer();
 		this.customerRepository.save(customer);
-		customer=this.customerRepository.findOne(customer.getId());
+		customer=this.customerRepository.findById(customer.getId());
 		Assert.isTrue(customer!=null);
 	}
 

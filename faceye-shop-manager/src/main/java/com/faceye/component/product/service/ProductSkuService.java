@@ -17,7 +17,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
 
 import com.faceye.feature.repository.mongo.DynamicSpecifications;
-import com.faceye.feature.util.ServiceException;
+ 
 /**
  * 模块:产品->com.faceye.compoent.product.service<br>
  * 说明:<br>

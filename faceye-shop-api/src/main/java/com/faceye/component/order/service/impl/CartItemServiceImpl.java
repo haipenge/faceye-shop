@@ -17,7 +17,7 @@ import com.faceye.component.order.entity.CartItem;
 import com.faceye.component.order.repository.mongo.CartItemRepository;
 import com.faceye.component.order.service.CartItemService;
 
-import com.faceye.feature.util.ServiceException;
+ 
 import com.faceye.feature.repository.mongo.DynamicSpecifications;
 import com.faceye.feature.service.impl.BaseMongoServiceImpl;
 /**
@@ -26,7 +26,7 @@ import com.faceye.feature.service.impl.BaseMongoServiceImpl;
  * haipenge@gmail.com<br>
 *  Create Date:2014年5月20日<br>
  */
-import com.mysema.query.types.Predicate;
+import com.querydsl.core.types.Predicate;
 @Service
 public class CartItemServiceImpl extends BaseMongoServiceImpl<CartItem, Long, CartItemRepository> implements CartItemService {
 
@@ -37,7 +37,7 @@ public class CartItemServiceImpl extends BaseMongoServiceImpl<CartItem, Long, Ca
 	
 	
 	@Override
-	public Page<CartItem> getPage(Map<String, Object> searchParams, int page, int size) throws ServiceException {
+	public Page<CartItem> getPage(Map<String, Object> searchParams, int page, int size)   {
 		if (page != 0) {
 			page = page - 1;
 		}

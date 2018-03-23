@@ -41,7 +41,7 @@ public class InvoiceRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testDelete() throws Exception {
 		Invoice invoice = new Invoice();
 		this.invoiceRepository.save(invoice);
-        this.invoiceRepository.delete(invoice.getId());
+        this.invoiceRepository.deleteById(invoice.getId());
         Iterable<Invoice> invoices = this.invoiceRepository.findAll();
 		Assert.isTrue(!invoices.iterator().hasNext());
 	}
@@ -50,7 +50,7 @@ public class InvoiceRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testFindOne() throws Exception {
 		Invoice invoice = new Invoice();
 		this.invoiceRepository.save(invoice);
-		invoice=this.invoiceRepository.findOne(invoice.getId());
+		invoice=this.invoiceRepository.findById(invoice.getId());
 		Assert.isTrue(invoice!=null);
 	}
 

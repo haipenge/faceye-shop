@@ -17,7 +17,7 @@ import com.faceye.component.product.entity.DataType;
 import com.faceye.component.product.repository.mongo.DataTypeRepository;
 import com.faceye.component.product.service.DataTypeService;
 
-import com.faceye.feature.util.ServiceException;
+ 
 import com.faceye.feature.repository.mongo.DynamicSpecifications;
 import com.faceye.feature.service.impl.BaseMongoServiceImpl;
 /**
@@ -26,7 +26,7 @@ import com.faceye.feature.service.impl.BaseMongoServiceImpl;
  * haipenge@gmail.com<br>
 *  Create Date:2014年5月20日<br>
  */
-import com.mysema.query.types.Predicate;
+import com.querydsl.core.types.Predicate;
 @Service
 public class DataTypeServiceImpl extends BaseMongoServiceImpl<DataType, Long, DataTypeRepository> implements DataTypeService {
 
@@ -37,7 +37,7 @@ public class DataTypeServiceImpl extends BaseMongoServiceImpl<DataType, Long, Da
 	
 	
 	@Override
-	public Page<DataType> getPage(Map<String, Object> searchParams, int page, int size) throws ServiceException {
+	public Page<DataType> getPage(Map<String, Object> searchParams, int page, int size)   {
 		if (page != 0) {
 			page = page - 1;
 		}

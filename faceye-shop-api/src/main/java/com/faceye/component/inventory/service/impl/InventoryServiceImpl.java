@@ -12,13 +12,13 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
 import com.faceye.feature.repository.mongo.DynamicSpecifications;
-import com.faceye.feature.util.ServiceException;
+ 
 
 import com.faceye.component.inventory.entity.Inventory;
 import com.faceye.component.inventory.repository.mongo.InventoryRepository;
 import com.faceye.component.inventory.service.InventoryService;
 import com.faceye.feature.service.impl.BaseMongoServiceImpl;
-import com.mysema.query.types.Predicate;
+import com.querydsl.core.types.Predicate;
 
 /**
  * 模块:库存->com.faceye.compoent.inventory.service.impl<br>
@@ -43,7 +43,7 @@ public class InventoryServiceImpl extends BaseMongoServiceImpl<Inventory, Long, 
      * 创建日期:2015-6-13 11:31:37<br>
 	*/
 	@Override
-	public Page<Inventory> getPage(Map<String, Object> searchParams, int page, int size) throws ServiceException {
+	public Page<Inventory> getPage(Map<String, Object> searchParams, int page, int size)   {
 		if (page != 0) {
 			page = page - 1;
 		}

@@ -41,7 +41,7 @@ public class OrderRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testDelete() throws Exception {
 		Order order = new Order();
 		this.orderRepository.save(order);
-        this.orderRepository.delete(order.getId());
+        this.orderRepository.deleteById(order.getId());
         Iterable<Order> orders = this.orderRepository.findAll();
 		Assert.isTrue(!orders.iterator().hasNext());
 	}
@@ -50,7 +50,7 @@ public class OrderRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testFindOne() throws Exception {
 		Order order = new Order();
 		this.orderRepository.save(order);
-		order=this.orderRepository.findOne(order.getId());
+		order=this.orderRepository.findById(order.getId());
 		Assert.isTrue(order!=null);
 	}
 

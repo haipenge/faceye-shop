@@ -12,13 +12,13 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
 import com.faceye.feature.repository.mongo.DynamicSpecifications;
-import com.faceye.feature.util.ServiceException;
+ 
 
 import com.faceye.component.product.entity.ProductProperty;
 import com.faceye.component.product.repository.mongo.ProductPropertyRepository;
 import com.faceye.component.product.service.ProductPropertyService;
 import com.faceye.feature.service.impl.BaseMongoServiceImpl;
-import com.mysema.query.types.Predicate;
+import com.querydsl.core.types.Predicate;
 
 /**
  * 模块:产品->com.faceye.compoent.product.service.impl<br>
@@ -43,7 +43,7 @@ public class ProductPropertyServiceImpl extends BaseMongoServiceImpl<ProductProp
      * 创建日期:2015-6-13 11:31:36<br>
 	*/
 	@Override
-	public Page<ProductProperty> getPage(Map<String, Object> searchParams, int page, int size) throws ServiceException {
+	public Page<ProductProperty> getPage(Map<String, Object> searchParams, int page, int size)   {
 		if (page != 0) {
 			page = page - 1;
 		}

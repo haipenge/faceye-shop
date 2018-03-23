@@ -12,13 +12,13 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
 import com.faceye.feature.repository.mongo.DynamicSpecifications;
-import com.faceye.feature.util.ServiceException;
+ 
 
 import com.faceye.component.order.entity.Order;
 import com.faceye.component.order.repository.mongo.OrderRepository;
 import com.faceye.component.order.service.OrderService;
 import com.faceye.feature.service.impl.BaseMongoServiceImpl;
-import com.mysema.query.types.Predicate;
+import com.querydsl.core.types.Predicate;
 
 /**
  * 模块:订单->com.faceye.compoent.order.service.impl<br>
@@ -43,7 +43,7 @@ public class OrderServiceImpl extends BaseMongoServiceImpl<Order, Long, OrderRep
      * 创建日期:2015-6-13 11:31:36<br>
 	*/
 	@Override
-	public Page<Order> getPage(Map<String, Object> searchParams, int page, int size) throws ServiceException {
+	public Page<Order> getPage(Map<String, Object> searchParams, int page, int size)   {
 		if (page != 0) {
 			page = page - 1;
 		}

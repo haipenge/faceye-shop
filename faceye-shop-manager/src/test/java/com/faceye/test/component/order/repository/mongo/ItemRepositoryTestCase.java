@@ -41,7 +41,7 @@ public class ItemRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testDelete() throws Exception {
 		Item item = new Item();
 		this.itemRepository.save(item);
-        this.itemRepository.delete(item.getId());
+        this.itemRepository.deleteById(item.getId());
         Iterable<Item> items = this.itemRepository.findAll();
 		Assert.isTrue(!items.iterator().hasNext());
 	}
@@ -50,7 +50,7 @@ public class ItemRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testFindOne() throws Exception {
 		Item item = new Item();
 		this.itemRepository.save(item);
-		item=this.itemRepository.findOne(item.getId());
+		item=this.itemRepository.findById(item.getId());
 		Assert.isTrue(item!=null);
 	}
 

@@ -41,7 +41,7 @@ public class CartRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testDelete() throws Exception {
 		Cart entity = new Cart();
 		this.cartRepository.save(entity);
-        this.cartRepository.delete(entity.getId());
+        this.cartRepository.deleteById(entity.getId());
         Iterable<Cart> entities = this.cartRepository.findAll();
 		Assert.isTrue(!entities.iterator().hasNext());
 	}
@@ -50,7 +50,7 @@ public class CartRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testFindOne() throws Exception {
 		Cart entity = new Cart();
 		this.cartRepository.save(entity);
-		Cart cart=this.cartRepository.findOne(entity.getId());
+		Cart cart=this.cartRepository.findById(entity.getId());
 		Assert.isTrue(cart!=null);
 	}
 

@@ -19,7 +19,7 @@ import com.faceye.component.setting.repository.mongo.ShopRepository;
 import com.faceye.component.setting.service.ShopService;
 import com.faceye.feature.repository.mongo.DynamicSpecifications;
 import com.faceye.feature.service.impl.BaseMongoServiceImpl;
-import com.faceye.feature.util.ServiceException;
+ 
 import com.querydsl.core.types.Predicate;
 
 /**

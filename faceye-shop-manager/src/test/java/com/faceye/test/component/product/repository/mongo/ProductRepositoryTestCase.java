@@ -41,7 +41,7 @@ public class ProductRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testDelete() throws Exception {
 		Product product = new Product();
 		this.productRepository.save(product);
-        this.productRepository.delete(product.getId());
+        this.productRepository.deleteById(product.getId());
         Iterable<Product> products = this.productRepository.findAll();
 		Assert.isTrue(!products.iterator().hasNext());
 	}
@@ -50,7 +50,7 @@ public class ProductRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testFindOne() throws Exception {
 		Product product = new Product();
 		this.productRepository.save(product);
-		product=this.productRepository.findOne(product.getId());
+		product=this.productRepository.findById(product.getId());
 		Assert.isTrue(product!=null);
 	}
 

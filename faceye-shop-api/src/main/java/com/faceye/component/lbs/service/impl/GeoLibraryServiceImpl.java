@@ -17,7 +17,7 @@ import com.faceye.component.lbs.entity.GeoLibrary;
 import com.faceye.component.lbs.repository.mongo.GeoLibraryRepository;
 import com.faceye.component.lbs.service.GeoLibraryService;
 
-import com.faceye.feature.util.ServiceException;
+ 
 import com.faceye.feature.repository.mongo.DynamicSpecifications;
 import com.faceye.feature.service.impl.BaseMongoServiceImpl;
 /**
@@ -26,7 +26,7 @@ import com.faceye.feature.service.impl.BaseMongoServiceImpl;
  * haipenge@gmail.com<br>
 *  Create Date:2014年5月20日<br>
  */
-import com.mysema.query.types.Predicate;
+import com.querydsl.core.types.Predicate;
 @Service
 public class GeoLibraryServiceImpl extends BaseMongoServiceImpl<GeoLibrary, Long, GeoLibraryRepository> implements GeoLibraryService {
 
@@ -37,7 +37,7 @@ public class GeoLibraryServiceImpl extends BaseMongoServiceImpl<GeoLibrary, Long
 	
 	
 	@Override
-	public Page<GeoLibrary> getPage(Map<String, Object> searchParams, int page, int size) throws ServiceException {
+	public Page<GeoLibrary> getPage(Map<String, Object> searchParams, int page, int size)   {
 		if (page != 0) {
 			page = page - 1;
 		}

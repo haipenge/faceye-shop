@@ -41,7 +41,7 @@ public class CategoryRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testDelete() throws Exception {
 		Category category = new Category();
 		this.categoryRepository.save(category);
-        this.categoryRepository.delete(category.getId());
+        this.categoryRepository.deleteById(category.getId());
         Iterable<Category> categorys = this.categoryRepository.findAll();
 		Assert.isTrue(!categorys.iterator().hasNext());
 	}
@@ -50,7 +50,7 @@ public class CategoryRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testFindOne() throws Exception {
 		Category category = new Category();
 		this.categoryRepository.save(category);
-		category=this.categoryRepository.findOne(category.getId());
+		category=this.categoryRepository.findById(category.getId()).get();
 		Assert.isTrue(category!=null);
 	}
 

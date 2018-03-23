@@ -17,7 +17,7 @@ import com.faceye.component.platform.entity.Platform;
 import com.faceye.component.platform.repository.mongo.PlatformRepository;
 import com.faceye.component.platform.service.PlatformService;
 
-import com.faceye.feature.util.ServiceException;
+ 
 import com.faceye.feature.repository.mongo.DynamicSpecifications;
 import com.faceye.feature.service.impl.BaseMongoServiceImpl;
 /**
@@ -26,7 +26,7 @@ import com.faceye.feature.service.impl.BaseMongoServiceImpl;
  * haipenge@gmail.com<br>
 *  Create Date:2014年5月20日<br>
  */
-import com.mysema.query.types.Predicate;
+import com.querydsl.core.types.Predicate;
 @Service
 public class PlatformServiceImpl extends BaseMongoServiceImpl<Platform, Long, PlatformRepository> implements PlatformService {
 
@@ -37,7 +37,7 @@ public class PlatformServiceImpl extends BaseMongoServiceImpl<Platform, Long, Pl
 	
 	
 	@Override
-	public Page<Platform> getPage(Map<String, Object> searchParams, int page, int size) throws ServiceException {
+	public Page<Platform> getPage(Map<String, Object> searchParams, int page, int size)   {
 		if (page != 0) {
 			page = page - 1;
 		}

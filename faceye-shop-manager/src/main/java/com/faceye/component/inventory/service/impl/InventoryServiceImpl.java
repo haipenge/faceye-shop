@@ -23,7 +23,7 @@ import com.faceye.component.product.model.SkuInfo;
 import com.faceye.component.product.service.SkuPropertyService;
 import com.faceye.feature.repository.mongo.DynamicSpecifications;
 import com.faceye.feature.service.impl.BaseMongoServiceImpl;
-import com.faceye.feature.util.ServiceException;
+ 
 import com.querydsl.core.types.Predicate;
 
 /**

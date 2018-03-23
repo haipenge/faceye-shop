@@ -17,7 +17,7 @@ import com.faceye.component.product.entity.Image;
 import com.faceye.component.product.repository.mongo.ImageRepository;
 import com.faceye.component.product.service.ImageService;
 
-import com.faceye.feature.util.ServiceException;
+ 
 import com.faceye.feature.repository.mongo.DynamicSpecifications;
 import com.faceye.feature.service.impl.BaseMongoServiceImpl;
 /**
@@ -26,7 +26,7 @@ import com.faceye.feature.service.impl.BaseMongoServiceImpl;
  * haipenge@gmail.com<br>
 *  Create Date:2014年5月20日<br>
  */
-import com.mysema.query.types.Predicate;
+import com.querydsl.core.types.Predicate;
 @Service
 public class ImageServiceImpl extends BaseMongoServiceImpl<Image, Long, ImageRepository> implements ImageService {
 
@@ -37,7 +37,7 @@ public class ImageServiceImpl extends BaseMongoServiceImpl<Image, Long, ImageRep
 	
 	
 	@Override
-	public Page<Image> getPage(Map<String, Object> searchParams, int page, int size) throws ServiceException {
+	public Page<Image> getPage(Map<String, Object> searchParams, int page, int size)   {
 		if (page != 0) {
 			page = page - 1;
 		}

@@ -41,7 +41,7 @@ public class @entity.name@RepositoryTestCase extends BaseRepositoryTestCase {
 	public void testDelete() throws Exception {
 		@entity.name@ entity = new @entity.name@();
 		this.@entity.config.name@Repository.save(entity);
-        this.@entity.config.name@Repository.delete(entity.getId());
+        this.@entity.config.name@Repository.deleteById(entity.getId());
         Iterable<@entity.name@> entities = this.@entity.config.name@Repository.findAll();
 		Assert.isTrue(!entities.iterator().hasNext());
 	}
@@ -50,7 +50,7 @@ public class @entity.name@RepositoryTestCase extends BaseRepositoryTestCase {
 	public void testFindOne() throws Exception {
 		@entity.name@ entity = new @entity.name@();
 		this.@entity.config.name@Repository.save(entity);
-		@entity.name@ @entity.config.name@=this.@entity.config.name@Repository.findOne(entity.getId());
+		@entity.name@ @entity.config.name@=this.@entity.config.name@Repository.findById(entity.getId());
 		Assert.isTrue(@entity.config.name@!=null);
 	}
 

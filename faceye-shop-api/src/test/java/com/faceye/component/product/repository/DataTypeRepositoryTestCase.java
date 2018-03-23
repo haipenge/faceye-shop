@@ -41,7 +41,7 @@ public class DataTypeRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testDelete() throws Exception {
 		DataType entity = new DataType();
 		this.dataTypeRepository.save(entity);
-        this.dataTypeRepository.delete(entity.getId());
+        this.dataTypeRepository.deleteById(entity.getId());
         Iterable<DataType> entities = this.dataTypeRepository.findAll();
 		Assert.isTrue(!entities.iterator().hasNext());
 	}
@@ -50,7 +50,7 @@ public class DataTypeRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testFindOne() throws Exception {
 		DataType entity = new DataType();
 		this.dataTypeRepository.save(entity);
-		DataType dataType=this.dataTypeRepository.findOne(entity.getId());
+		DataType dataType=this.dataTypeRepository.findById(entity.getId());
 		Assert.isTrue(dataType!=null);
 	}
 

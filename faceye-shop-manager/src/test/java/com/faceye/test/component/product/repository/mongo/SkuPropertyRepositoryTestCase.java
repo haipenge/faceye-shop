@@ -41,7 +41,7 @@ public class SkuPropertyRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testDelete() throws Exception {
 		SkuProperty skuProperty = new SkuProperty();
 		this.skuPropertyRepository.save(skuProperty);
-        this.skuPropertyRepository.delete(skuProperty.getId());
+        this.skuPropertyRepository.deleteById(skuProperty.getId());
         Iterable<SkuProperty> skuPropertys = this.skuPropertyRepository.findAll();
 		Assert.isTrue(!skuPropertys.iterator().hasNext());
 	}
@@ -50,7 +50,7 @@ public class SkuPropertyRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testFindOne() throws Exception {
 		SkuProperty skuProperty = new SkuProperty();
 		this.skuPropertyRepository.save(skuProperty);
-		skuProperty=this.skuPropertyRepository.findOne(skuProperty.getId());
+		skuProperty=this.skuPropertyRepository.findById(skuProperty.getId());
 		Assert.isTrue(skuProperty!=null);
 	}
 

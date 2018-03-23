@@ -4,21 +4,21 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
-import com.faceye.feature.repository.mongo.DynamicSpecifications;
-import com.faceye.feature.util.ServiceException;
+import org.springframework.stereotype.Service;
 
 import com.faceye.component.customer.entity.Address;
 import com.faceye.component.customer.repository.mongo.AddressRepository;
 import com.faceye.component.customer.service.AddressService;
+import com.faceye.feature.repository.mongo.DynamicSpecifications;
 import com.faceye.feature.service.impl.BaseMongoServiceImpl;
-import com.mysema.query.types.Predicate;
+ 
+import com.querydsl.core.types.Predicate;
 
 /**
  * 模块:客户->com.faceye.compoent.customer.service.impl<br>
@@ -43,7 +43,7 @@ public class AddressServiceImpl extends BaseMongoServiceImpl<Address, Long, Addr
      * 创建日期:2015-6-13 11:31:37<br>
 	*/
 	@Override
-	public Page<Address> getPage(Map<String, Object> searchParams, int page, int size) throws ServiceException {
+	public Page<Address> getPage(Map<String, Object> searchParams, int page, int size)   {
 		if (page != 0) {
 			page = page - 1;
 		}

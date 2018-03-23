@@ -28,7 +28,7 @@ import com.faceye.component.lbs.service.model.Province;
 import com.faceye.feature.repository.mongo.DynamicSpecifications;
 import com.faceye.feature.service.impl.BaseMongoServiceImpl;
 import com.faceye.feature.util.Json;
-import com.faceye.feature.util.ServiceException;
+ 
 import com.fasterxml.jackson.core.type.TypeReference;
 /**
  * GeoLibrary 服务实现类<br>

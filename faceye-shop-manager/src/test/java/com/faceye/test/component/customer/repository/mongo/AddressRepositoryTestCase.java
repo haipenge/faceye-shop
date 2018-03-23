@@ -41,7 +41,7 @@ public class AddressRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testDelete() throws Exception {
 		Address address = new Address();
 		this.addressRepository.save(address);
-        this.addressRepository.delete(address.getId());
+        this.addressRepository.deleteById(address.getId());
         Iterable<Address> addresss = this.addressRepository.findAll();
 		Assert.isTrue(!addresss.iterator().hasNext());
 	}
@@ -50,7 +50,7 @@ public class AddressRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testFindOne() throws Exception {
 		Address address = new Address();
 		this.addressRepository.save(address);
-		address=this.addressRepository.findOne(address.getId());
+		address=this.addressRepository.findById(address.getId());
 		Assert.isTrue(address!=null);
 	}
 

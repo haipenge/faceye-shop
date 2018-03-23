@@ -41,7 +41,7 @@ public class ImageRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testDelete() throws Exception {
 		Image entity = new Image();
 		this.imageRepository.save(entity);
-        this.imageRepository.delete(entity.getId());
+        this.imageRepository.deleteById(entity.getId());
         Iterable<Image> entities = this.imageRepository.findAll();
 		Assert.isTrue(!entities.iterator().hasNext());
 	}
@@ -50,7 +50,7 @@ public class ImageRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testFindOne() throws Exception {
 		Image entity = new Image();
 		this.imageRepository.save(entity);
-		Image image=this.imageRepository.findOne(entity.getId());
+		Image image=this.imageRepository.findById(entity.getId());
 		Assert.isTrue(image!=null);
 	}
 

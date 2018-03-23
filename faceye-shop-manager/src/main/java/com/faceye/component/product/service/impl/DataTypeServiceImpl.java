@@ -17,7 +17,7 @@ import com.faceye.component.product.entity.DataType;
 import com.faceye.component.product.repository.mongo.DataTypeRepository;
 import com.faceye.component.product.service.DataTypeService;
 
-import com.faceye.feature.util.ServiceException;
+ 
 import com.faceye.feature.repository.mongo.DynamicSpecifications;
 import com.faceye.feature.service.impl.BaseMongoServiceImpl;
 /**

@@ -41,7 +41,7 @@ public class DynamicPropertyRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testDelete() throws Exception {
 		DynamicProperty dynamicProperty = new DynamicProperty();
 		this.dynamicPropertyRepository.save(dynamicProperty);
-        this.dynamicPropertyRepository.delete(dynamicProperty.getId());
+        this.dynamicPropertyRepository.deleteById(dynamicProperty.getId());
         Iterable<DynamicProperty> dynamicPropertys = this.dynamicPropertyRepository.findAll();
 		Assert.isTrue(!dynamicPropertys.iterator().hasNext());
 	}
@@ -50,7 +50,7 @@ public class DynamicPropertyRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testFindOne() throws Exception {
 		DynamicProperty dynamicProperty = new DynamicProperty();
 		this.dynamicPropertyRepository.save(dynamicProperty);
-		dynamicProperty=this.dynamicPropertyRepository.findOne(dynamicProperty.getId());
+		dynamicProperty=this.dynamicPropertyRepository.findById(dynamicProperty.getId());
 		Assert.isTrue(dynamicProperty!=null);
 	}
 

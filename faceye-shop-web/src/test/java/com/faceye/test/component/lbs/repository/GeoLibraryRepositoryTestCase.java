@@ -41,7 +41,7 @@ public class GeoLibraryRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testDelete() throws Exception {
 		GeoLibrary entity = new GeoLibrary();
 		this.geoLibraryRepository.save(entity);
-        this.geoLibraryRepository.delete(entity.getId());
+        this.geoLibraryRepository.deleteById(entity.getId());
         Iterable<GeoLibrary> entities = this.geoLibraryRepository.findAll();
 		Assert.isTrue(!entities.iterator().hasNext());
 	}
@@ -50,7 +50,7 @@ public class GeoLibraryRepositoryTestCase extends BaseRepositoryTestCase {
 	public void testFindOne() throws Exception {
 		GeoLibrary entity = new GeoLibrary();
 		this.geoLibraryRepository.save(entity);
-		GeoLibrary geoLibrary=this.geoLibraryRepository.findOne(entity.getId());
+		GeoLibrary geoLibrary=this.geoLibraryRepository.findById(entity.getId()).get();
 		Assert.isTrue(geoLibrary!=null);
 	}
 
